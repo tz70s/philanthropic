@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="http://140.112.42.81:8999/css/main.css">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <title>Data Visualization</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    
+    <!-- Font awesome -->
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!--d3 js-->
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+
+    <link rel="stylesheet" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600">
+    <link rel="stylesheet" type="text/css" href="http://140.112.42.81:8999/css/render.css"/>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body>
+    <nav class="navbar navbar-static-top navbar-light">
+      <div class="collapse navbar-toggleable-md" id="navbar">
+        <ul class="nav navbar-nav float-lg-right">
+        </ul>
+      </div>
+    </nav>
+    <div class="hero">
+      <div class="container">
+        <h3 style="color: #fadb1e; font-size: 2.5em"><strong style="font-size: 3.5em">公益</strong>捐款<strong style="font-size: 3.5em">視圖</strong></h3></br>
+        <div>
+          <a class="btn-default hero-btn" href="http://140.112.42.81:8999/">返回主页！</a>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <form class="form-inline" style="position: center">
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-addon">合约编号</div>
+              <input type="text" class="form-control" id="idnumber" placeholder="格式：A1234567" style="width:30em; height:3em">
+          </div>
+        </div>
+        <button type="submit" id="sub" class="btn btn-success" style="width:5em; height:2.8em; font-size:1.1em; background-color: #2e2e2e; color: #afa835; border-color:#2e2e2e;"><strong>提交</strong></button>
+      </form>
+    </div>
+    
+   
+
+    <hr class="feature-divider">
+    <div class="container">
+      <h2 style="color:#2e2e2e">捐款比例评估</h2>
+    </div>
+    <!-- /container -->
+    <hr class="feature-divider">
+    <div class="container features">
+      <div id="main">
+        <div id="sequence"></div>
+        <div id="chart">
+          <div id="explanation" style="visibility: hidden;">
+            <span id="percentage"></span><br/>
+            of staged cost
+          </div>
+        </div>
+      </div>
+      <div id="sidebar">
+      <div id="legend"></div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="http://140.112.42.81:8999/js/graph.js"></script>
+    <script type="text/javascript">
+      // Hack to make this example display correctly in an iframe on bl.ocks.org
+      d3.select(self.frameElement).style("height", "700px");
+    </script>
+    <hr>
+    
+    <p class="text-center" style="font-size: 1.1em; color: #afa835">2017 @ Team <strong>-273</strong></p>
+
+  </body>
+</html>
